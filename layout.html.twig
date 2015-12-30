@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex,nofollow" />
+        <title>Symfony3 Cheat-Sheets</title>
+        <link href="" rel="stylesheet" />
+        <link href="" rel="stylesheet" />
+        {% block head '' %}
+    </head>
+    <body>
+        <div class="inner">
+            <div id="main-div">
+                <header>
+                    <div id="title">Symfony Cheatsheet</div>
+                    <h1>Finally, a Symfony guide to make your work easier.</h1>
+                    <span class="version">v 3.*</span>
+                </header>
+
+                <div class="nav-container">
+                    <nav>
+                        <ul class="nav nav-pills">
+                            {% for sheet in sheets -%}
+                            <li>
+                                <a href="#{{ sheet[0] }}">{{ sheet[0]|title }}</a>
+                            </li>
+                            {%- endfor %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="scroll-div">
+                <section id="main_content">
+                    {% for sheet in sheets -%}
+                    <hr>
+                    <h2 id="{{ sheet[0] }}">{{ sheet[0]|upper }} <a href="#top" class="small">back to top</a></h2>
+                    {% include sheet[1] %}
+                    {%- endfor %}
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
