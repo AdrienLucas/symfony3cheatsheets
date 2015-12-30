@@ -1,19 +1,8 @@
 <?php
 
 require(__DIR__.'/vendor/autoload.php');
-//require_once '/path/to/lib/Twig/Autoloader.php';
 
 use Symfony\Component\Finder\Finder;
-use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
-
-    /*
-    $buildPath = __DIR__.'/build';
-    if (!$fs->exists($buildPath)) {
-        $fs->mkdir($buildPath);
-    }
-    */
-
 
 try {
 
@@ -38,6 +27,6 @@ try {
         'sheets' => $includes
     ]);
 
-} catch (IOExceptionInterface $e) {
+} catch (\Exception $e) {
     echo "An error occurred while building the cheatsheet : ".$e->getMessage();
 }
