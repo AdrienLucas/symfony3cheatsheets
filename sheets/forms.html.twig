@@ -163,7 +163,7 @@ return $this-&gt;render('AcmeTaskBundle:Task:new.html.twig', array(
 
     <div class="row">
 
-        <div class="span6">
+        <div class="col-xs-6">
     <p><strong>Text field</strong></p>
 
     <table>
@@ -216,7 +216,7 @@ return $this-&gt;render('AcmeTaskBundle:Task:new.html.twig', array(
 
         </div>
 
-        <div class="span6">
+        <div class="col-xs-6">
 
     <p><strong>Date and datetime fields</strong></p>
 
@@ -312,7 +312,7 @@ return $this-&gt;render('AcmeTaskBundle:Task:new.html.twig', array(
 &lt;div&gt;
     {{ form_label(form.task,'custom label') }}
     {{ form_errors(form.task) }}
-    {{ form_widget(form.task, { 'attr': {'class': 'span3'} })) }}
+    {{ form_widget(form.task, { 'attr': {'class': 'col-xs-3'} })) }}
 &lt;/div&gt;
 &lt;div&gt;
     {{ form_label(form.dueDate) }}

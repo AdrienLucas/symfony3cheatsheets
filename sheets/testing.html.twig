@@ -78,7 +78,7 @@ class DemoControllerTest extends WebTestCase
 
     <div class="row">
 
-        <div class="span6">
+        <div class="col-xs-6">
     <p>The createClient() method returns a client, which is like a browser that you'll use to crawl your site:</p>
 
     <p>The request() method returns a Crawler object which can be used to select elements in the Response, click on links, and submit forms.</p>
@@ -93,7 +93,7 @@ $crawler = $client-&gt;click($link);
 
         </div>
 
-        <div class="span6">
+        <div class="col-xs-6">
         <li>
             <p>Submit a form:</p>
 
@@ -118,7 +118,7 @@ $crawler = $client-&gt;submit($form);
 
     <div class="row">
 
-        <div class="span6">
+        <div class="col-xs-6">
             <p><strong>Assert that the response matches a given CSS selector.</strong></p>
 
 {% raw %}<pre><code> $this-&gt;assertGreaterThan(0, $crawler-&gt;filter('h1')-&gt;count());
@@ -180,7 +180,7 @@ $crawler = $client-&gt;submit($form);
 </code></pre>{% endraw %}
         </div>
 
-        <div class="span6">
+        <div class="col-xs-6">
 
 
             <p><strong>Form submission with a file upload</strong></p>
@@ -249,7 +249,7 @@ $client-&gt;followRedirects();
 
     <div class="row">
 
-        <div class="span6">
+        <div class="col-xs-6">
 
 {% raw %}<pre><code>request(
     $method,
@@ -266,7 +266,7 @@ $client-&gt;followRedirects();
         following:</p>
         </div>
 
-        <div class="span6">
+        <div class="col-xs-6">
 
 
 {% raw %}<pre><code>$client-&gt;request(
@@ -311,7 +311,7 @@ $profile = $client-&gt;getProfile();
 
     <div class="row">
 
-        <div class="span6">
+        <div class="col-xs-6">
     <p>A Crawler instance is returned each time you make a request with the Client. It allows you to traverse
         HTML documents, select nodes, find links and forms.</p>
 
@@ -341,7 +341,7 @@ $profile = $client-&gt;getProfile();
 
         </div>
 
-        <div class="span6">
+        <div class="col-xs-6">
     <h4>Extracting information</h4>
 
     {% raw %}
@@ -375,7 +375,7 @@ $client-&gt;click($link);
 
     <div class="row">
 
-        <div class="span6">
+        <div class="col-xs-6">
     <h3>Forms</h3>
 {% raw%}<pre><code>// Selecting buttons.
 $buttonCrawlerNode = $crawler-&gt;selectButton('submit');
@@ -415,7 +415,7 @@ $form['photo']-&gt;upload('/path/to/lucas.jpg');
 
         </div>
 
-        <div class="span6">
+        <div class="col-xs-6">
 
     <h3>Test environment configuration</h3>
 
@@ -459,4 +459,3 @@ swiftmailer:
         </div>
 
     </div>
-
